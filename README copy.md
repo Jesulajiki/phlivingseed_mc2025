@@ -1,2 +1,0 @@
-# TagyForms
-Reg-Print Management
