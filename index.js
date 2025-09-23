@@ -70,6 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Disable button and show loading state
     submitBtn.disabled = true;
     submitBtn.textContent = "Loading...";
+    submitBtn.style.opacity = "0.5";          // faded look
+    submitBtn.style.cursor = "not-allowed";   // blocked cursor
+
+
 
     const formData = new FormData(form);
 
