@@ -343,12 +343,12 @@
       <div class="inputguy">
         <select id="regstate">
           <option value="" disabled selected>Select State ...</option>
-          <option value="Imo">Imo</option>
           <option value="Abia">Abia</option>
-          <option value="Rivers">Rivers</option>
+          <option value="Akwa Ibom">Akwa Ibom</option>
           <option value="Bayelsa">Bayelsa</option>
-          <option value="Akwaibom">Akwa Ibom</option>
           <option value="Cross River">Cross River</option>
+          <option value="Imo">Imo</option>
+          <option value="Rivers">Rivers</option>
         </select>
         <input type="text" id="regper" placeholder="Input Registrar">
       </div>
@@ -1023,7 +1023,7 @@ function renderStackList() {
               <span style="font-weight:bold; color:#000000">Program Code:</span> 
                 <span style="color:#1a1a1a">${item.serial}</span> | 
               <span style="font-weight:bold; color:#000000">Print Status:</span> 
-                <span style="color:#1a1a1a">${item.printed}</span>
+                <span style="color:#1a1a1a">${item.printed ? item.printed : "yet to be printed"}</span>
             </div>
           `).join("");
 
