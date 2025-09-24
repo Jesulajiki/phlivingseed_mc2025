@@ -127,8 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
           // Redirect after pressing OK
           window.location.href = "index.html";
         });
+      } else if (result.status === "duplicate") {
+        showError("Duplicate: " + result.message);
+        window.location.href = "index.html";
       } else {
-        showError("Form submitted, but something went wrong: " + result.message);
+        showError("Form not submitted successfully, something went wrong: " + result.message);
       }
 
     } catch (error) {
