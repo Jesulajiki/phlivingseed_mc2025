@@ -362,7 +362,16 @@
             <label>Print Section</label>
             <div class="inc">
               <input type="text" id="serial_input" placeholder="Input code">
-              <input type="text" id="tag_input" placeholder="Input tag position">
+              <select id="tag_input">
+                <option value="" disabled selected>Input Tag position</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+
             </div>
             <div class="func">
               <button class="act-btn" id="auto_print">Auto Stack</button>
@@ -758,7 +767,7 @@ function renderStackList() {
       const tagInput = document.getElementById('tag_input');
       
       const serialNo = serialInput.value.trim();
-      const tagPos = Number(tagInput.value.trim());
+      const tagPos = Number(tagInput.value);
 
       if (!serialNo) {
         alert("Please enter a serial number.");
@@ -827,7 +836,7 @@ function renderStackList() {
       const tagInput = document.getElementById('tag_input');
       
       const serialNo = serialInput.value.trim();
-      const tagPos = Number(tagInput.value.trim());
+      const tagPos = Number(tagInput.value);
       disableBtn(lastPrint)
       try {
         const response = await fetch(
